@@ -7,6 +7,7 @@ const addElementToList = (task) => {
   newEl.textContent = task;
   taskList.appendChild(newEl);
   taskDescription.value = '';
+  taskDescription.placeholder = 'description'
 }
 
 const submitClickAction = (buttonClick) => {
