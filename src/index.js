@@ -1,4 +1,4 @@
-const submitButton = document.querySelector('input[type="submit"]');
+const form = document.querySelector('#create-task-form')
 const taskList = document.getElementById('tasks');
 const taskDescription = document.getElementById('new-task-description')
 
@@ -10,7 +10,7 @@ const addElementToList = (task) => {
   taskDescription.placeholder = 'description'
 }
 
-const submitClickAction = (buttonClick) => {
+const submitAction = (buttonClick) => {
   buttonClick.preventDefault()
   if (taskDescription.value != '') {
     addElementToList(taskDescription.value)
@@ -20,5 +20,5 @@ const submitClickAction = (buttonClick) => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  submitButton.addEventListener('click', submitClickAction)
+  form.addEventListener('submit', submitAction)
 });
