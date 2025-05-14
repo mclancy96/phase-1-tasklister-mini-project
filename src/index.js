@@ -10,8 +10,8 @@ const addElementToList = (task) => {
   taskDescription.placeholder = 'description'
 }
 
-const submitAction = (buttonClick) => {
-  buttonClick.preventDefault()
+const submitAction = (formSubmission) => {
+  formSubmission.preventDefault()
   if (taskDescription.value != '') {
     addElementToList(taskDescription.value)
   } else {
